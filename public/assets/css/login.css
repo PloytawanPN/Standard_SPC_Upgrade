@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    margin: -8px;
+    height: 100vh;
+    width: 100vw;
+    background: #f6f5f7;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+
+.container_login {
+    position: relative;
+    background-color: white;
+    height: 500px;
+    width: 900px;
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.container_login .signin-container {
+    position: absolute;
+    width: 65%;
+    border-radius: 13px 0 0 13px;
+    height: 100%;
+    z-index: 2;
+}
+.container_login .signup-container {
+    position: absolute;
+    right: 0;
+    width: 35%;
+    height: 100%;
+    background: #fd1d1d;
+    border-radius: 0 13px 13px 0;
+    z-index: 1px;
+    text-align: center;
+    overflow: hidden;
+}
+.container_login .signin-container h1 {
+    color: #fd1d1d;
+}
+.container_login .signin-container .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.container_login .signin-container .form .icon {
+    position: absolute;
+    margin: 38px 0 0 010px;
+}
+.container_login .input-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 15px 0 0 0;
+}
+.container_login .input-field input {
+    background-color: rgb(241, 241, 241);
+    border: none;
+    outline: none;
+    padding: 10px 10px 10px 40px;
+    margin-top: 7px;
+    width: 92%;
+}
+.container_login .form button {
+    background: #fd1d1d;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+.container_login .form button:hover {
+    outline: 3px solid #fd1d1d;
+    background-color: rgba(240, 248, 255, 0);
+    color: #fd1d1d;
+    transition: 0.5s;
+}
+.container_login .form a {
+    text-decoration: none;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #464646;
+    transition: 0.5s;
+}
+.container_login .form a:hover {
+    color: #fd1d1d;
+}
+.container_login .underline {
+    width: 106%;
+    height: 2px;
+    background-color: #fd1d1d;
+    margin-top: -2px;
+    transform: scale(0, 1);
+    transition: all 0.3s ease;
+}
+.container_login input:focus ~ .underline {
+    transform: scale(1, 1);
+}
+.container_login .signup-container button {
+    background-color: rgba(0, 255, 255, 0);
+    border: none;
+    outline: 2px solid white;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+.container_login .signup-container button:hover {
+    outline: 10px solid white;
+}
+.container_login .signup-container .p-field {
+    margin-top: 150px;
+}
+.container_login .signup-container h1 {
+    font-size: 25px;
+    color: white;
+}
+.container_login .signup-container p {
+    color: white;
+}
+.container_login .box_1 {
+    height: 150px;
+    width: 150px;
+    outline: 1px solid white;
+    position: absolute;
+    right: -20px;
+    top: -60px;
+    transform: rotate(45deg);
+    transition: 1s;
+}
+.container_login .box_2 {
+    height: 100px;
+    width: 100px;
+    outline: 1px solid white;
+    position: absolute;
+    right: -50px;
+    top: -10px;
+    transform: rotate(45deg);
+}
+.container_login .box_3 {
+    height: 70px;
+    width: 70px;
+    outline: 1px solid white;
+    position: absolute;
+    right: -50px;
+    bottom: 10px;
+    transform: rotate(45deg);
+}
+.container_login .error {
+    position: absolute;
+    font-size: 10px;
+    top: 13px;
+    right: -17px;
+    color: #fd1d1d;
+}
+
+span {
+    position: absolute;
+    font-size: 11px;
+    top: 14px;
+    right: -20px;
+    color: #fd1d1d;
+}
+
+@media only screen and (max-width: 950px) {
+    .container_login {
+        width: 700px;
+    }
+    .container_login .signin-container {
+        width: 55%;
+    }
+    .container_login .signup-container {
+
+        width: 45%;
+
+    }
+}
+@media only screen and (max-width: 750px) {
+    body{
+        background-color: #ffffff;
+    }
+    .container_login {
+        width: 380px;
+        background-color: #ff000000;
+        box-shadow:none;
+    }
+    .container_login .signin-container {
+        width: 100%;
+    }
+    .container_login .signup-container {
+        display: none;
+    }
+}

@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    margin: -8px;
+    height: 100vh;
+    width: 100vw;
+    background: #f6f5f7;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+.container_register {
+    position: relative;
+    background-color: white;
+    height: 500px;
+    width: 900px;
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.container_register .s_department {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    outline: none;
+    padding: 10px 10px 10px 40px;
+    margin-top: 7px;
+    width: 106%;
+}
+.container_register .select-field {
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    margin: 10px 0 0 24px;
+    position: relative;
+}
+.container_register .signin-container {
+    position: absolute;
+    width: 35%;
+    border-radius: 13px 0 0 13px;
+    background: #fd1d1d;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+    overflow: hidden;
+}
+.container_register .signin-container button {
+    background-color: rgba(0, 255, 255, 0);
+    border: none;
+    outline: 2px solid white;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+.container_register .signin-container button:hover {
+    outline: 10px solid white;
+}
+.container_register .signin-container .p-field {
+    margin-top: 150px;
+}
+.container_register .signin-container h1 {
+    font-size: 25px;
+    color: white;
+}
+.container_register .signin-container p {
+    color: white;
+    margin: 0 10px 0 10px;
+}
+.container_register .signup-container {
+    position: absolute;
+    width: 65%;
+    right: 0;
+    height: 100%;
+    border-radius: 0 13px 13px 0;
+    z-index: 1px;
+}
+.container_register .signup-container h1 {
+    color: #fd1d1d;
+}
+.container_register .signup-container .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+}
+.container_register .signup-container .form .icon {
+    position: absolute;
+    margin: 15px 0 0 010px;
+}
+.container_register .signup-container .form .icon_select {
+    position: absolute;
+    margin: 8px 0 0 010px;
+}
+.container_register .signup-container button {
+    background: #fd1d1d;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 30px 0 0 0;
+    transition: 0.5s;
+}
+.select_icon {
+    z-index: 1;
+    position: absolute;
+    top: 7px;
+    left: 9px;
+}
+.container_register .input-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 15px 0 0 0;
+}
+.container_register .input-field input {
+    background-color: rgb(241, 241, 241);
+    border: none;
+    outline: none;
+    padding: 10px 0 10px 40px;
+    margin-top: 7px;
+    width: 95%;
+}
+.container_register .form button:hover {
+    outline: 3px solid #fd1d1d;
+    background-color: rgba(240, 248, 255, 0);
+    color: #fd1d1d;
+    transition: 0.5s;
+}
+.container_register .underline {
+    width: 106%;
+    height: 2px;
+    background-color: #fd1d1d;
+    margin-top: -2px;
+    transform: scale(0, 1);
+    transition: all 0.3s ease;
+}
+.container_register input:focus ~ .underline {
+    transform: scale(1, 1);
+}
+.container_register .box_1 {
+    height: 150px;
+    width: 150px;
+    outline: 1px solid white;
+    position: absolute;
+    left: 0;
+    top: -60px;
+    transform: rotate(45deg);
+    transition: 1s;
+}
+.container_register .box_2 {
+    height: 100px;
+    width: 100px;
+    outline: 1px solid white;
+    position: absolute;
+    left: -30px;
+    top: -10px;
+    transform: rotate(45deg);
+}
+.container_register .box_3 {
+    height: 70px;
+    width: 70px;
+    outline: 1px solid white;
+    position: absolute;
+    right: -50px;
+    bottom: 10px;
+    transform: rotate(45deg);
+}
+.error_department {
+    position: absolute;
+    font-size: 10px;
+    top: -15px;
+    right: 0;
+    color: #fd1d1d;
+}
+.error {
+    position: absolute;
+    font-size: 10px;
+    top: -9px;
+    right: -22px;
+    color: #fd1d1d;
+}
+
+.custom-select {
+    margin-top: 7px;
+    width: 370px;
+    margin-left: 20px;
+    position: relative;
+}
+.custom-select::before,
+.custom-select::after {
+    --size: 0.3rem;
+    position: absolute;
+    content: "";
+    right: 1rem;
+    pointer-events: none;
+}
+
+.custom-select::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+    top: 50%;
+}
+select {
+    padding-left: 30px;
+    background-color: rgb(241, 241, 241);
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 0.675em 6em 0.675em 3em;
+    border: 1px solid #caced1;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+span {
+    position: absolute;
+    font-size: 11px;
+    top: -9px;
+    right: -20px;
+    color: #fd1d1d;
+}
+
+.custom-select span {
+    position: absolute;
+    font-size: 11px;
+    top: -16px;
+    right: 0;
+    color: #fd1d1d;
+}
+
+@media only screen and (max-width: 950px) {
+    .container_register {
+        width: 700px;
+    }
+    .container_register .signin-container {
+        width: 45%;
+    }
+    .container_register .signup-container {
+        width: 55%;
+    }
+    .custom-select {
+        width: 260px;
+        margin-left: 30px;
+    }
+
+}
+@media only screen and (max-width: 750px) {
+    body {
+        background-color: #ffffff;
+    }
+    .container_register {
+        width: 380px;
+        background-color: #ff000000;
+        box-shadow: none;
+    }
+    .container_register .signin-container {
+        display: none;
+    }
+    .container_register .signup-container {
+        width: 100%;
+    }
+}

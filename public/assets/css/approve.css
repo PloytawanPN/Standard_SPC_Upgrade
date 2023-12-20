@@ -1,0 +1,538 @@
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+.contaion {
+    background-color: white;
+    margin: 0 20px 0 20px;
+    padding-bottom: 40px;
+    min-height: 100%;
+}
+.contaion h1 {
+    padding: 10px 0 0 30px;
+}
+.request_field {
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 18px;
+    width: calc(100% - 50px);
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    transition: ease 0.3s all;
+}
+.request_field:hover {
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.315) 0px 4px 8px;
+}
+.header_content {
+    margin: 10px 0 10px 30px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header_content .header {
+    display: flex;
+    flex-direction: row;
+}
+.datetime {
+    padding: 0 10px 0 10px;
+    min-width: 195px;
+    max-width: 195px;
+    border-radius: 5px;
+    outline: 0.5px solid rgb(102, 102, 102);
+    border: none;
+    margin-right: 10px;
+    height: 35px;
+    margin-top: 5px;
+}
+.search_btn {
+    padding: 0 10px 0 10px;
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 100px;
+    margin: 4px 0 0 0;
+    background-color: #e5e5ec;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search_btn_icon {
+    display: none;
+    padding: 0 10px 0 10px;
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 30px;
+    margin: 4px 0 0 0;
+    background-color: #e5e5ec;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search_btn_icon:hover {
+    background-color: #d6d6db;
+}
+.search_btn:hover {
+    background-color: #d6d6db;
+}
+.dropdown {
+    position: relative;
+    background-color: rgba(237, 237, 241, 0.911);
+    height: 40px;
+    min-width: 150px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.search_input {
+    padding: 0 10px 0 10px;
+    min-width: 195px;
+    max-width: 195px;
+    border-radius: 4px;
+    outline: 0.5px solid rgb(102, 102, 102);
+    border: none;
+    margin-right: 10px;
+    height: 35px;
+    margin-top: 5px;
+}
+.title_search {
+    margin: 10px;
+}
+.dropdown_list {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 100%;
+    z-index: 10;
+    top: 45px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.dropdown.close .dropdown_list {
+    display: block;
+}
+.dropdown_list li {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0 10px 10px;
+}
+.all {
+    background-color: #ffffff;
+    margin: 8px 10px 0 0;
+    width: 10px;
+    height: 10px;
+    outline: solid 1px rgb(201, 201, 201);
+}
+.dropdown_list li:hover .all{
+    outline:none;
+}
+.approve {
+    background-color: #15e47c;
+    margin: 8px 10px 0 0;
+    width: 10px;
+    height: 10px;
+    outline: solid 1px white;
+}
+.null_st {
+    background-color: #ffffff;
+    margin: 8px 10px 0 0;
+    width: 10px;
+    height: 10px;
+    outline: solid 1px white;
+}
+.reject {
+    background-color: #fd1d1d;
+    margin: 8px 10px 0 0;
+    width: 10px;
+    height: 10px;
+    outline: solid 1px white;
+}
+.wait {
+    background-color: #f9bc0d;
+    margin: 8px 10px 0 0;
+    width: 10px;
+    height: 10px;
+    outline: solid 1px white;
+}
+.dropdown_list li:hover {
+    background-color: #fd1d1d;
+    color: white;
+    border-radius: 4px;
+}
+.dropdown .icon {
+    position: absolute;
+    right: 7px;
+    top: 10px;
+}
+.dropdown .header {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    font-size: 15px;
+}
+table .status {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.status.wait {
+    background-color: #f9bc0d;
+}
+.status.success {
+    background-color: #15e47c;
+}
+.status.cancel {
+    background-color: #fd1d1d;
+}
+table .user {
+    width: 100px;
+    text-align: center;
+}
+table .time_rq {
+    position: absolute;
+    width: 250px;
+    right: 0;
+}
+table .time_app {
+    position: absolute;
+    width: 250px;
+    right: 300px;
+}
+.file_icon {
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px auto 20px auto;
+}
+.file_icon .bx-file-blank {
+    cursor: pointer;
+    font-size: 100px;
+    color: #949494;
+}
+.file_icon label {
+    cursor: pointer;
+    top: 100px;
+    left: 215px;
+    position: absolute;
+    font-size: 12px;
+}
+.bg_modal_1 {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.bg_modal_2 {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.bg_modal_3 {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.bg_modal_4 {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.data_detail {
+    margin: auto;
+    margin-top: 20px;
+    overflow: auto;
+    height: 240px;
+    width: 350px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: solid 1px rgb(206, 206, 206);
+}
+.data_detail thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.data_detail th,
+.data_detail td {
+    padding: 5px;
+}
+.data_detail th {
+    background: #ffffff;
+}
+.modal_content {
+    text-align: center;
+    border-radius: 4px;
+    margin: auto;
+    position: relative;
+    background-color: #fefefe;
+    width: 600px;
+    padding: 0 50px 0 50px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+.dowload_file {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 320px;
+    width: 100%;
+    z-index: 100;
+}
+.dowload_file .loader {
+    margin: auto;
+    border: 5px solid #eaf0f6;
+    border-radius: 50%;
+    border-top: 5px solid #ff2929;
+    width: 30px;
+    height: 30px;
+    animation: spinner 4s linear infinite;
+    margin-top: 120px;
+}
+.load_file {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #ffffff;
+    height: 320px;
+    width: 100%;
+    z-index: 100;
+}
+.load_file .loader {
+    margin-top: 100px;
+}
+.modal_content .icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal_content h2 {
+    padding: 20px 0 10px 0;
+}
+.modal_content .input_field {
+    margin: auto;
+    padding: 20px 0 20px 0;
+    width: 350px;
+    position: relative;
+}
+.modal_content .input_field .err_password {
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+.modal_content .input_field input {
+    width: calc(100% - 150px);
+}
+.modal_content .input_field .error {
+    color: red;
+    font-size: 20px;
+}
+.modal_content button {
+    border: none;
+    padding: 7px 10px 7px 10px;
+    margin: 0 5px 25px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.approve_btn {
+    color: #14bd69;
+    background-color: white;
+    outline: solid 1px rgb(214, 214, 214);
+}
+.reject_btn {
+    color: #fd1d1d;
+    background-color: white;
+    outline: solid 1px rgb(214, 214, 214);
+}
+.approve_btn:hover {
+    color: white;
+    background-color: #15e47c;
+    outline: none;
+}
+.reject_btn:hover {
+    color: white;
+    background-color: #fd1d1d;
+    outline: none;
+}
+.modal_content .input_field input {
+    padding: 4px;
+    margin-left: 10px;
+}
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+td,
+th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.loading {
+    z-index: 300;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: white;
+    height: 430px;
+    width: 100%;
+}
+.loader {
+    margin: auto;
+    margin-top: 150px;
+    border: 5px solid #eaf0f6;
+    border-radius: 50%;
+    border-top: 5px solid #7759ff;
+    width: 40px;
+    height: 40px;
+    animation: spinner 4s linear infinite;
+}
+.complete {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+}
+.complete h3 {
+    margin-top: 30px;
+}
+.contaion img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.not_found {
+    text-align: center;
+    color: #adadad;
+}
+@media only screen and (max-width: 800px) {
+    .contaion h1 {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    table .time_rq {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    table .time_app {
+        display: none;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .file_icon label {
+        left: 150px;
+    }
+    .modal_content {
+        width: 370px;
+        padding: 0;
+    }
+    .label_header {
+        display: none;
+    }
+    .modal_content .icon {
+        right: 10px;
+        top: 10px;
+    }
+    .data_detail {
+        border-radius: 0;
+        outline: solid rgb(185, 185, 185) 1px;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 1330px) {
+    .dropdown {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .datetime,
+    .title_search {
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .search_btn{
+        display: none;
+    }
+    .search_btn_icon{
+        display: block;
+    }
+}
+
